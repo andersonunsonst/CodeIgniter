@@ -20,6 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->helper('download');
+		$data = 'Here is some text!';
+		$name = 'mytext.txt';
+		force_download($name, $data);
 		$this->load->view('welcome_message');
 	}
 }
