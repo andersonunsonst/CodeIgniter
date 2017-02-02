@@ -63,7 +63,8 @@ called *mypic.jpg* located in the source_image folder, then create a
 thumbnail that is 75 X 50 pixels using the GD2 image_library. Since the
 maintain_ratio option is enabled, the thumb will be as close to the
 target width and height as possible while preserving the original aspect
-ratio. The thumbnail will be called *mypic_thumb.jpg*
+ratio. The thumbnail will be called *mypic_thumb.jpg* and located at
+the same level as *source_image*.
 
 .. note:: In order for the image class to be allowed to do any
 	processing, the folder containing the image files must have write
@@ -407,7 +408,7 @@ Class Reference
 			method is not very useful unless you intend to build such an
 			interface. That's exactly what we did using for the photo gallery module
 			in ExpressionEngine, the CMS we develop. We added a JavaScript UI that
-			lets the cropping area be selected.
+			lets the cropping area be selected. (from EllisLab)
 
 	.. php:method:: rotate()
 
@@ -471,4 +472,4 @@ Class Reference
 		Returns all detected errors formatted as a string.
 		::
 
-			echo $this->image_lib->diplay_errors();
+			echo $this->image_lib->display_errors();
